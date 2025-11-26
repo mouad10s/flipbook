@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Flipbook</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.css">
+  <style>
+    #flipbook {
+      width: 800px;
+      height: 600px;
+      margin: 50px auto;
+    }
+    #flipbook .page {
+      width: 400px; /* Half of flipbook width */
+      height: 600px;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="flipbook">
+  <div class="page" style="background-image: url('page1.jpg');"></div>
+  <div class="page" style="background-image: url('page2.jpg');"></div>
+  <div class="page" style="background-image: url('page3.jpg');"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+<script>
+  $("#flipbook").turn({
+    width: 800,
+    height: 600,
+    autoCenter: true
+  });
+</script>
+
+</body>
+</html>
